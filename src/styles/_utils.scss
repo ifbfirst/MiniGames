@@ -1,0 +1,51 @@
+@mixin flex-center($direction: row) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: center;
+  align-items: center;
+}
+
+.u-text-center {
+  text-align: center;
+}
+
+.u-visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.u-flex {
+  display: flex;
+}
+
+.u-flex-center {
+  @include flex-center;
+}
+
+.u-full-width {
+  width: 100%;
+}
+
+.u-container {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: var(--size-2);
+  padding-left: var(--size-2);
+
+  @media (min-width: 375px) {
+    max-width: 100%;
+  }
+  @media (min-width: 768px) {
+    max-width: 720px;
+  }
+  @media (min-width: 1920px) {
+    max-width: 1840px;
+  }
+}
